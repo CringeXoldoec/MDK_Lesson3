@@ -36,7 +36,7 @@ class ProductController extends Controller
         $order->product_id = $request->input('product_id');
         $order->quantity = $request->input('quantity');
     
-        // Вычисляем общую сумму цены безопасно
+        // Вычисляем общую сумму цены 
         $totalPrice = $product->price * $request->input('quantity');
         $order->total_price = $totalPrice;
     
